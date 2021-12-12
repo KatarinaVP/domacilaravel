@@ -11,6 +11,13 @@ class Poslovnica extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'grad',
+        'adresa',
+        'kompanija_id'
+    ];
+
+
     public function kompanija()
     {
         return $this->belongsTo(Kompanija::class);

@@ -11,6 +11,11 @@ class Kompanija extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'naziv',
+        'maticni_broj',
+    ];
+
     public function poslovnice()
     {
         return $this->hasMany(Poslovnica::class);

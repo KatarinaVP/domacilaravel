@@ -10,6 +10,13 @@ class Zaposleni extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'prezime',
+        'br_telefona',
+        'poslovnica_id'
+    ];
+
     public function poslovnica()
     {
         return $this->belongsTo(Poslovnica::class);
