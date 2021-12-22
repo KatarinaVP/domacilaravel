@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Poslovnica;
 
 class ZaposleniFactory extends Factory
 {
@@ -17,7 +18,7 @@ class ZaposleniFactory extends Factory
             'ime' => $this->faker->firstName(),
             'prezime' => $this->faker->lastName(),
             'br_telefona' => $this->faker->e164PhoneNumber(),
-            'poslovnica_id' => $this->faker->numberBetween($min = 1, $max = 20)
+            'poslovnica_id' => Poslovnica::factory()
         ];
     }
 }
